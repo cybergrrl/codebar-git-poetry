@@ -1,1 +1,1 @@
-export const data = [elegance.css,pride.css]
+export const data = ['elegance.css','pride.css'];
