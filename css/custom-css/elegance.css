@@ -1,0 +1,87 @@
+/* light-elegant-theme.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+/* Define subtle pastel colors */
+:root {
+  --pastel-cream: #f9f5f0;
+  --pastel-gray: #d3d3d3;
+}
+
+/* Apply elegant fonts */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #555;
+  background-color: var(--pastel-cream);
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Define subtle pastel colors */
+:root {
+  --pastel-cream: #f9f5f0;
+  --pastel-gray: #d3d3d3;
+}
+
+/* Apply elegant fonts and subtle pastel colors */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555;
+  background-color: var(--pastel-cream);
+}
+
+header,
+aside,
+main,
+footer {
+  background-color: transparent; /* Remove distinct background colors */
+  color: #333;
+}
+
+#theme-dropdown-button {
+  background-color: var(--pastel-gray);
+  color: #333;
+  border: none;
+}
+
+#theme-dropdown-content a:hover {
+  background-color: var(--pastel-gray);
+}
+
+/* Additional elegant styling */
+a {
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  font-weight: lighter;
+}
+
+/* Subtle box shadows for depth */
+header,
+aside,
+main,
+footer,
+#theme-dropdown-button {
+  box-shadow: none; /* Remove box shadows for a flatter design */
+}

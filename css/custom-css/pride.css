@@ -1,0 +1,36 @@
+/* pride-theme.css */
+
+/* Define Pride flag colors */
+:root {
+  --red: #e40303;
+  --orange: #ff8c00;
+  --yellow: #ffed00;
+  --green: #008026;
+  --blue: #004dff;
+  --purple: #750787;
+}
+
+/* Apply Pride flag colors to different elements */
+header {
+  background-color: var(--red);
+}
+
+aside {
+  background-color: var(--orange);
+}
+
+main {
+  background-color: var(--yellow);
+}
+
+footer {
+  background-color: var(--green);
+}
+
+#theme-dropdown-button {
+  background-color: var(--blue);
+}
+
+#theme-dropdown-content a:hover {
+  background-color: var(--purple);
+}
