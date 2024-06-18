@@ -21,7 +21,7 @@ jobs:
         run: |
           file_array=($(cat data/css-file-list.js))
           formatted_array=$(IFS=,; echo "[${file_array[*]}]")
-          echo "${formatted_array%,}" > data/css-file-list.js
+          echo "export const data = [${formatted_array%,}]" > data/css-file-list.js
       - name: Commit and push file list
         run: |
           git config --local user.email "action@github.com"
