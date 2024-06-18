@@ -1,0 +1,23 @@
+name: List CSS Files
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: List files in custom-css folder
+        run: |
+          mkdir -p data
+          ls css/custom-css > data/css-file-list.txt
+      - name: Commit and push file list
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/css-file-list.txt
+          git commit -m "Update CSS file list" -a || echo "No changes to commit"
+          git push
