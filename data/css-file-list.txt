@@ -1,2 +1,2 @@
-dark.css
+elegance.css
 pride.css
