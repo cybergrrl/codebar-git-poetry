@@ -15,16 +15,17 @@ jobs:
       - name: List files in custom-css folder
         run: |
           mkdir -p data
-          ls css/custom-css > data/css-file-list.txt
+          ls css/custom-css > data/css-file-list.js
       - name: Create array of file names
         id: file-names
         run: |
-          file_array=($(cat data/css-file-list.txt))
-          echo "[${file_array[@]}]" > data/css-file-list.txt
+          file_array=($(cat data/css-file-list.js))
+          formatted_array=$(IFS=,; echo "[${file_array[*]}]")
+          echo "${formatted_array%,}" > data/css-file-list.js
       - name: Commit and push file list
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/css-file-list.txt
+          git add data/css-file-list.js
           git commit -m "Update CSS file list" -a || echo "No changes to commit"
           git push https://${{ secrets.GH_PAT }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
