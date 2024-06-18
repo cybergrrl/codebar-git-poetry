@@ -1,3 +1,2 @@
 dark.css
-light.css
 pride.css
