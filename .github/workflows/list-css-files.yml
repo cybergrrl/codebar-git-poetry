@@ -16,6 +16,11 @@ jobs:
         run: |
           mkdir -p data
           ls css/custom-css > data/css-file-list.txt
+      - name: Create array of file names
+        id: file-names
+        run: |
+          file_array=($(cat data/css-file-list.txt))
+          echo "[${file_array[@]}]" > data/css-file-list.txt
       - name: Commit and push file list
         run: |
           git config --local user.email "action@github.com"
